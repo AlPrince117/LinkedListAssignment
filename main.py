@@ -22,12 +22,6 @@ class LinkedList:
             current_node = next_node
         self.head = prev_node
 
-    # def printList(self):
-    #     temp = self.head
-    #     while temp is not None:
-    #         print(temp.data, end=" ")
-    #         temp.next
-
     def is_infinite(self):
         address_set = set()
         temp = self.head
@@ -39,23 +33,14 @@ class LinkedList:
             temp = temp.next
         return False
 
-    # def is_infinite(self):
-    #     node = self.head
-    #     node_addresses = []
-    #     while node is not None:
-    #         print(node.data)
-    #         node = node.next
-    #         # if node.next in node_addresses:
-    #         #     return True
-    #         # else:
-    #         #     node_addresses.append(node.next)
-    #         #     return False
-
 
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
+    def __repr__(self):
+        return self.data
 
 
 # Press the green button in the gutter to run the script.
@@ -68,13 +53,15 @@ if __name__ == '__main__':
     node_3 = Node('c')
     node_1.next = node_2
     node_2.next = node_3
+    head = linked_list.head
     # node_3.next = node_2
     # linked_list.reverse_linkedList()
     # linked_list.printList()
 
     # print(linked_list.is_infinite())
-    print(linked_list)
-    linked_list.reverse_linkedList()
-    print(linked_list)
+    # linked_list2 = LinkedList()
+    # print(linked_list)
+    # linked_list.reverse_linkedList()
+    print(linked_list.head)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
